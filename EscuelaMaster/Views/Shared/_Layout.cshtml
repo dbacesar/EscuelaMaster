@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <title>Estilo Menu</title>
+    <link href="~/Content/EstiloMenu.css" rel="stylesheet" />
+
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+
+</head>
+<body>
+
+    <div id="encabezado">
+        <h1>MASTER EN CSS</h1>
+        <img src="~/Content/Img/EASY E.800.V.TR1.png" width="100" height="100" />
+    </div>
+
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-left">
+
+                    <li class="active"><a href="https://localhost:44353/Home/Index">Inicio</a></li>
+                    <li class="active"><a href="https://localhost:44353/Generica/Generica">Contenido</a></li>
+                    <li class="active"><a href="https://localhost:44353/Generica/Generica">Requerimientos</a></li>
+                    <li class="active"><a href="https://localhost:44353/Generica/Generica">lenguajes</a></li>
+                    <li class="active"><a href="https://localhost:44353/Generica/Generica">Frameworks</a></li>
+                    <li class="active"><a href="https://localhost:44353/Generica/Generica">Proyectos</a></li>
+                    <li class="active"><a href="https://localhost:44353/Generica/Generica">El instructor</a></li>
+                    <li class="active"><a href="https://localhost:44353/Generica/Generica">Reseñas</a></li>
+                    <li class="active"><a href="https://localhost:44353/Generica/Generica">Blog</a></li>
+                    <li class="active"><a href="https://localhost:44353/Generica/Generica">Contacto</a></li>
+                    <li class="active"><a href="https://localhost:44353/TblUsuarios/Index">Usuarios</a></li>
+                    <li class="active">
+                        @if (Session["UsuarioID"] != null)
+                        {<a href="@Url.Action("LogOutUser", "Home")">Cerrar sesión...</a>}
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container body-content">
+        @RenderBody()
+    </div>      
+</body>
+</html>

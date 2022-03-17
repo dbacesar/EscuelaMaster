@@ -1,0 +1,191 @@
+﻿@model EscuelaMaster.Models.TblUsuario
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        a {
+            color: mediumseagreen;
+        }
+    </style>
+</head>
+<body style="background-color:lightgray;">
+
+    <div class="container">
+        <div class="col-md-3">
+            <div class="card">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <center><h3>Entrar a la web</h3></center>
+                    </div al>
+                    <div class="panel-body">
+                        
+                        <div class="AreaLogin">
+
+                            @using (Html.BeginForm("Autorizar", "Home", FormMethod.Post))
+                            {
+                                <b><p align="center">Usuario:</p></b>
+                                <p align="center">
+                                    @Html.TextBoxFor(model => model.NombreUsuario,
+                                    new { @placeholder = "Ingrese nombre de usuario..." })
+                                    @Html.ValidationMessageFor(model => model.NombreUsuario)
+                                </p>
+
+                                <b><p align="center">Contraseña:</p></b>
+
+                                <p align="center">
+                                    @Html.PasswordFor(model => model.ClaveUsuario,
+                                    new { @placeholder = "Ingrese su clave..." })
+                                </p>
+
+                                <p align="center">
+                                    @Html.ValidationMessageFor(model => model.ClaveUsuario)
+                                    <input type="submit" name="" value="Entrar" />
+                                    <br />
+                                    <label>@Html.DisplayFor(model => model.PpMensaje)</label>
+                                </p>
+                            }@*BeginForm autorizar...*@
+                        </div>
+
+                        <hr />
+                        <a href="https://www.google.com/">Zona de alumnos</a>
+                        <br />
+                        <a href="https://www.google.com/">Zona de profesores</a>
+                        <a href="https://www.google.com/">Acceso a calificaciones</a>
+                        <hr />
+                        <div class="panel-footer">
+                            <center><b>Enlaces de interes</b></center>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <ul style="padding-left: 2em; list-style-type: square ">
+                            <li><a href="https://www.google.com/">Master en JavaScript</a></li>
+                            <li><a href="https://www.google.com/">Master en JavaScript</a></li>
+                            <li><a href="https://www.google.com/">MasterFramework JS</a></li>
+                            <li><a href="https://www.google.com/">Master Web fullstack</a></li>
+                            <li><a href="https://www.google.com/">Master dbacesar@outloo.es</a></li>
+                        </ul>
+                    </div>
+                    <div class="panel-body">
+                        Frase del día:<br />
+                        "No hay mal que por bien no venga"
+                    </div>
+                    <hr />
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-9">
+            <div class="card">
+                <div class="panel panel-default">
+                    <center>
+                        <div class="panel-body"><h3>Noticias de Fornt-End</h3></div>
+                    </center>
+                    <hr />
+                    <ul style="padding-left:2em; padding-right: 2em;">
+                        <p style="text-align:justify">
+                            <button type="button" class="btn btn-default">
+                                <span class="glyphicon glyphicon-align-right"></span>
+                            </button>
+
+                            <a href="https://www.google.com/">Título de la entrada</a>
+                            Lorem ipsum dolor sit amet,
+                            consectetur adipiscing elit,
+                            sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua.
+                            Ut enim ad minim veniam,
+                            quis nostrud exercitation ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat.
+                            Duis aute irure dolor in reprehenderit in voluptate
+                            velit esse cillum dolore eu fugiat nulla pariatur.
+                            Excepteur sint occaecat cupidatat non proident,
+                            sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        </p>
+
+                        <p style="text-align:justify">
+                            <button type="button" class="btn btn-default">
+                                <span class="glyphicon glyphicon-align-right"></span>
+                            </button>
+
+                            <a href="https://www.google.com/">Título de la entrada</a>
+                            Lorem ipsum dolor sit amet,
+                            consectetur adipiscing elit,
+                            sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua.
+                            Ut enim ad minim veniam,
+                            quis nostrud exercitation ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat.
+                            Duis aute irure dolor in reprehenderit in voluptate
+                            velit esse cillum dolore eu fugiat nulla pariatur.
+                            Excepteur sint occaecat cupidatat non proident,
+                            sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        </p>
+                    </ul>
+                </div>
+
+                <div class="panel panel-default">
+                    <center>
+                        <div class="panel-body"><h3>Noticias de Fornt-End</h3></div>
+                    </center>
+                    <hr />
+                    <br />
+                    <ul style="padding-left:2em; padding-right: 2em;">
+                        <p style="text-align:justify">
+                            <button type="button" class="btn btn-default">
+                                <span class="glyphicon glyphicon-align-right"></span>
+                            </button>
+
+                            <a href="https://www.google.com/">Título de la entrada</a>
+                            Lorem ipsum dolor sit amet,
+                            consectetur adipiscing elit,
+                            sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua.
+                            Ut enim ad minim veniam,
+                            quis nostrud exercitation ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat.
+                            Duis aute irure dolor in reprehenderit in voluptate
+                            velit esse cillum dolore eu fugiat nulla pariatur.
+                            Excepteur sint occaecat cupidatat non proident,
+                            sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        </p>
+
+                        <p style="text-align:justify">
+                            <button type="button" class="btn btn-default">
+                                <span class="glyphicon glyphicon-align-right"></span>
+                            </button>
+
+                            <a href="https://www.google.com/">Título de la entrada</a>
+                            Lorem ipsum dolor sit amet,
+                            consectetur adipiscing elit,
+                            sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua.
+                            Ut enim ad minim veniam,
+                            quis nostrud exercitation ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat.
+                            Duis aute irure dolor in reprehenderit in voluptate
+                            velit esse cillum dolore eu fugiat nulla pariatur.
+                            Excepteur sint occaecat cupidatat non proident,
+                            sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        </p>
+                    </ul>
+                </div>
+            </div>@*Card*@
+            
+                <p align="right">
+                    <a href="https://www.google.com/">[Ver histórico de noticias]</a>
+                </p>
+            
+        </div>
+
+        
+
+    </div> @*Container*@
+
+        <div class="navbar navbar-inverse navbar-bottom navbar-form">
+            <div class="copyright text-center">
+                <br />
+                <p style="color: white" ;>César Castaño, Colombia - Copyright &copy; 2022 </p>
+            </div>
+        </div>
+
+</body>
+</html>

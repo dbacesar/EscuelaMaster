@@ -1,0 +1,45 @@
+﻿@model EscuelaMaster.Models.TblHobbiesUsuario
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Desasosiar hobbie</h2>
+
+<h4>
+    ¿Confirma eliminar el Hobbie asociado al usuario
+    <span>@Html.DisplayFor(model => model.TblUsuario.NombreUsuario) ?</span>
+</h4>
+<div>
+
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Nombre del Hobbie:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Hobbies.NombreHobbie)
+        </dd>
+
+        <dt>
+           Usuario:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TblUsuario.NombreUsuario)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Desasociar" class="btn btn-default" /> |
+            @Html.ActionLink("Regresar...", "Index")
+        </div>
+    }
+</div>

@@ -1,0 +1,44 @@
+﻿@model IEnumerable<EscuelaMaster.Models.TblUsuario>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Lista de usuarios</h2>
+
+<p>
+    @Html.ActionLink("Crear nuevos usuarios", "Create", "", new { @class = "btn btn-primary" })
+    <a class="btn btn-primary" href="https://localhost:44353/TblHobbiesUsuarios/Index"
+       role="button">Hobbies</a>
+</p>
+   
+<table class="table">
+    <tr>
+        <th>
+           Nombre de usuario
+        </th>
+        <th>
+           Teléfono
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.NombreUsuario)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TelefonoUsuario)
+        </td>
+        <td>
+            @Html.ActionLink("Edición", "Edit", new { id = item.UsuarioID }) |
+            @Html.ActionLink("Detalles", "Details", new { id = item.UsuarioID }) |
+            @Html.ActionLink("Eliminar", "Delete", new { id = item.UsuarioID })
+
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,49 @@
+﻿@model EscuelaMaster.Models.TblUsuario
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Eliminar</h2>
+
+<h3>Deseas eliminar el usuario?</h3>
+<div>
+    <h4>TblUsuario</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NombreUsuario)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NombreUsuario)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ClaveUsuario)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClaveUsuario)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TelefonoUsuario)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TelefonoUsuario)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Desasociar" class="btn btn-default" /> |
+            @Html.ActionLink("Regresar...", "Index")
+        </div>
+    }
+</div>

@@ -1,1 +1,2 @@
 EscuelaMaster
+Ver nota abajo
